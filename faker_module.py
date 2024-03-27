@@ -1,4 +1,5 @@
 from faker import Faker
+import pyperclip
 fake=Faker()
 
 identity=[]
@@ -12,10 +13,11 @@ identity.append(fake.longitude())
 identity.append(fake.latitude())
 identity.append(fake.url())
 identity.append(fake.phone_number())
-
+identity.append(fake.password())
 
 for x in range(len(identity)):
     print(identity[x])
 
 
-print(fake.phone_number())
+
+#pyperclip.copy(str(identity))
